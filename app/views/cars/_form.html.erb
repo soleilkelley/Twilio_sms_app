@@ -1,36 +1,17 @@
-<%= form_for @cars do |f| %>
-<%= f.error_messages %>
-<p>
-<%= f.label :license_plate %>
-<%= f.text_field :license_plate %>
-</p>
+<%= simple_form_for @car, url: {action: "create"} do |f| %>
 
-<p>
-<%= f.label :state %>
-<%= f.text_field :state %>
-</p>
+<%= f.input :license_plate, label: "License Plate" %>
+<%= f.input :state %>
+<%= f.input :zip %>
 
-<p>
-<%= f.label :zip %>
-<%= f.text_field :zip %>
-</p>
+<%= f.simple_fields_for :contacts do |i| %>
+  <%= i.input :type, as: :hidden, value: "Phone" %>
+  <%= i.input :value, as: :tel, label: "Phone Number" %>
+<% end %>
+<%= f.input :nickname %>
 
+<%= f.check_box :terms %> I agree to these Terms & Conditions
 <p>
-<%= f.label :phone1 %>
-<%= f.text_field :phone1 %>
+  <%= f.button :submit, class:"btn btn-primary btn-large", value: "Register" %>
 </p>
-
-<p>
-<%= f.label :phone2 %>
-<%= f.text_field :phone2 %>
-</p>
-
-<p>
-<%= f.label :nickname %>
-<%= f.text_field :nickname %>
-</p>
-
-<p>
-<%= f.label :email %>
-<%= f.text_field :email %>
-</p>
+<% end %>

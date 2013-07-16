@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -29,6 +28,9 @@ gem 'jbuilder', '~> 1.0.1'
 
 gem 'secure_headers'
 gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'simple_form'
+
+gem 'twilio-ruby'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -40,7 +42,7 @@ group :test, :development do
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'
-  
+  gem 'binding_of_caller'
   gem 'better_errors'
   gem 'annotate'
   gem 'meta_request'

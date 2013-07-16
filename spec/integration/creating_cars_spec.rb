@@ -7,7 +7,7 @@ feature 'Creating Cars' do
     fill_in 'State', with: "WA"
     fill_in 'Zip', with: "98122"
     fill_in 'Phone Number', with: "555-555-5555"
-    choose 'I agree to these Terms & Conditions'
+    check 'car_terms'
     click_button "Register"
     page.should have_content("Car has been added")
   end
