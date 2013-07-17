@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 gem 'pg'
+gem 'unicorn'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -26,7 +27,6 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
-
 gem 'secure_headers'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem 'simple_form'
@@ -47,6 +47,7 @@ group :test, :development do
   gem 'better_errors'
   gem 'annotate'
   gem 'meta_request'
+  gem 'foreman'
 end
 
 group :test do
@@ -67,3 +68,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'rails_12factor', group: :production

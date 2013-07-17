@@ -12,7 +12,7 @@ class CarsController < ApplicationController
       redirect_to @car, notice: "Car has been added"
     else
       flash[:alert] = "Car has not been added"
-      render action: "show"
+      render action: "new"
     end
   end
 
