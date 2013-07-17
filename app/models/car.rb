@@ -9,13 +9,13 @@
 #  created_at    :datetime
 #  updated_at    :datetime
 #  nickname      :string(255)
-#  contacts_id   :integer
 #
 
 class Car < ActiveRecord::Base
   has_many :contacts, dependent: :destroy
+  accepts_nested_attributes_for :contacts
 
-  validates_acceptance_of :terms
+  validates_acceptance_of :terms, as: true
 
   validates :license_plate, presence: true
   validates :state, presence: true

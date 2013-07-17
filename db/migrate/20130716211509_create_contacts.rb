@@ -1,7 +1,8 @@
 class CreateContacts < ActiveRecord::Migration
   def change
     create_table :contacts do |t|
-      t.string :type
+      t.belongs_to :car
+      t.string :kind
       t.string :value
 
       t.timestamps

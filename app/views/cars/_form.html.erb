@@ -3,11 +3,13 @@
 <%= f.input :state %>
 <%= f.input :zip %>
 
-<%= f.simple_fields_for :contacts do |i| %>
-  <%= i.input :type, as: :hidden, value: "Phone" %>
-  <%= i.input :value, as: :tel, label: "Phone Number" %>
-<% end %>
 <%= f.input :nickname %>
+
+<%= f.association :contacts do |contact_form| %>
+  <%= contact_form.input :kind, as: :hidden, :input_html => { :value => "phone" } %> 
+  <%= contact_form.input :value, label: "Phone Number" %>
+<% end %>
+
 
 <%= f.check_box :terms %> I agree to these Terms & Conditions
 <p>
