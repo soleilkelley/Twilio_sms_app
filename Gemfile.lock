@@ -67,6 +67,8 @@ GEM
     debugger-ruby_core_source (1.2.3)
     diff-lcs (1.2.4)
     dotenv (0.7.0)
+    dotenv-rails (0.7.0)
+      dotenv (= 0.7.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -222,6 +224,7 @@ DEPENDENCIES
   bootstrap-sass (~> 2.3.2.0)
   capybara (= 1.1.2)
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   factory_girl (= 2.6.4)
   foreman
   jbuilder (~> 1.0.1)

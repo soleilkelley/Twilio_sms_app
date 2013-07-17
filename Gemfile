@@ -48,6 +48,7 @@ group :test, :development do
   gem 'annotate'
   gem 'meta_request'
   gem 'foreman'
+  gem 'dotenv-rails'
 end
 
 group :test do
