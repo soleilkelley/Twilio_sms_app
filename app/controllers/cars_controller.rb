@@ -46,7 +46,7 @@ class CarsController < ApplicationController
             @twilio_client = Twilio::REST::Client.new ENV["TWILIO_SID"], ENV["TWILIO_TOKEN"]
 
             @twilio_client.account.sms.messages.create(
-              :from => "+1" + ENV["TWILIO_PHONE_NUMBER"]
+              :from => "+1" + ENV["TWILIO_PHONE_NUMBER"],
               :to => number_to_send_to,
               :body => "Someone has notified us that you should go back to your car: " + car_name
             )
