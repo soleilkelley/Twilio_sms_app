@@ -59,6 +59,7 @@ class CarsController < ApplicationController
         end
       end
     end
+    redirect_to root_url, notice: "Alert sent"
   end
 
   private

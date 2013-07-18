@@ -1,5 +1,5 @@
 <%= form_tag("/sms", method: "post") do %>
-  <%= label_tag(:Body, "Text:") %>
+  <%= label_tag(:Body, "License Plate # and State abbreviation, e.g. ASD123 WA") %>
   <%= text_field_tag(:Body) %>
   <%= submit_tag("Send SMS alert") %>
 <% end %>
