@@ -17,7 +17,17 @@ class Car < ActiveRecord::Base
 
   validates_acceptance_of :terms, as: true
 
+  validates_uniqueness_of :license_plate, scope: :state, case_sensitive: false
   validates :license_plate, presence: true
   validates :state, presence: true
   validates :zip, presence: true
+
+  before_save :upcase
+
+  private
+  def upcase
+    self.license_plate.upcase! if self.license_plate
+    self.state.upcase! if self.state
+  end
+
 end

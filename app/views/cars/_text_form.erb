@@ -1,0 +1,5 @@
+<%= form_tag("/sms", method: "post") do %>
+  <%= label_tag(:Body, "Text:") %>
+  <%= text_field_tag(:Body) %>
+  <%= submit_tag("Send SMS alert") %>
+<% end %>
