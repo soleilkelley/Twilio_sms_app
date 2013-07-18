@@ -1,4 +1,5 @@
 class CarsController < ApplicationController
+  protect_from_forgery :only => [:new, :create]
   before_filter :find_car, only: [:show]
 
   def new
