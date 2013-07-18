@@ -22,9 +22,6 @@ class Car < ActiveRecord::Base
   validates :state, presence: true
   validates :zip, presence: true
 
-
-  validates_formatting_of :zip, :using => :us_zip
-
   before_save :upcase
 
   private

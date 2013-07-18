@@ -27,12 +27,11 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
-
-gem 'twilio-ruby'
 gem 'secure_headers'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem 'simple_form'
-gem 'validates_formatting_of'
+
+gem 'twilio-ruby'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
