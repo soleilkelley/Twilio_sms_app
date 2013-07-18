@@ -1,10 +1,14 @@
 <h1>You're registered!</h1>
-Here's your info:
+<h2>Thank you</h2>
+
+
 <ul>
-<li><%= @car.license_plate %></li>
-<li><%= @car.state %></li>
-<li><%= @car.zip %></li>
-<li><%= @car.nickname %></li>
+  <li>License plate #: <%= @car.license_plate %></li>
+  <li>State: <%= @car.state %></li>
+  <li>Zip: <%= @car.zip %></li>
+  <% if @car.nickname? %>
+    <li>Nickname: <%= @car.nickname %></li>
+  <% end %>
 <ul>
 
 <%= link_to "Home", root_url %>

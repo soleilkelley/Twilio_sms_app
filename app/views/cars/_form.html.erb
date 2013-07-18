@@ -7,12 +7,12 @@
 
 <%= f.association :contacts do |contact_form| %>
   <%= contact_form.input :kind, as: :hidden, :input_html => { :value => "phone" } %> 
-  <%= contact_form.input :value, label: "Phone Number" %>
+  <%= contact_form.input :value, type: "tel", label: "Phone Number", required: true %>
 <% end %>
 
 
 <%= f.check_box :terms %> I agree to these Terms & Conditions
 <p>
-  <%= f.button :submit, class:"btn btn-primary btn-large", value: "Register" %>
+  <%= f.button :submit, class:"btn btn-primary btn-large", required: true, value: "Register" %>
 </p>
 <% end %>
