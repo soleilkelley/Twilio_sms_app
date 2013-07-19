@@ -1,7 +1,7 @@
 <%= simple_form_for @car, url: {action: "create"} do |f| %>
 <%= f.input :license_plate, label: "Your Vehicle's License #" %>
 <%= f.input :state %>
-<%= f.input :zip, hint: "98104" %>
+<%= f.input :zip, placeholder: "98104" %>
 
 <%= f.input :nickname, label: "Vehicle Nickname" %>
 
