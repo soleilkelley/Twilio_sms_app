@@ -2,6 +2,7 @@ TwilioSmsApp::Application.routes.draw do
   root to: "cars#index"
 
   post "sms" => "cars#send_alert"
+  get "/faq" => "cars#faq"
 
   resources :cars, :contacts
   # The priority is based upon order of creation: first created -> highest priority.
