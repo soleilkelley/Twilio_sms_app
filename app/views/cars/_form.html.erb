@@ -3,7 +3,7 @@
 <%= f.input :state %>
 <%= f.input :zip %>
 
-<%= f.input :nickname, label: "Vehicle Nickname" => { :value => 'Hummer' } %>
+<%= f.input :nickname, label: "Vehicle Nickname" %>
 
 <%= f.association :contacts do |contact_form| %>
   <%= contact_form.input :kind, as: :hidden, :input_html => { :value => "phone" } %> 
