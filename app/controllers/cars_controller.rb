@@ -53,7 +53,7 @@ class CarsController < ApplicationController
           @twilio_client.account.sms.messages.create(
             :from => "+1" + ENV["TWILIO_PHONE_NUMBER"],
             :to => number_to_send_to,
-            :body => "Someone has notified us that you should go back to your car: " + name
+            :body => "SamariText Alert: A kind soul is recommending you return to your vehicle. Lights? Windows are down? Pets? Gonna get towed? For: " + name
           )
         elsif c.kind == "Email"
           # send email
