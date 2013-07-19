@@ -20,7 +20,6 @@ class Car < ActiveRecord::Base
   validates_uniqueness_of :license_plate, scope: :state, case_sensitive: false
   validates :license_plate, presence: true
   validates :state, presence: true
-  validates :zip, presence: true
 
   before_save :upcase
 
